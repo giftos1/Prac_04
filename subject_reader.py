@@ -7,9 +7,9 @@ FILENAME = "subject_data.txt"
 
 
 def main():
-    data = get_data()
-    print(data)
-
+    #data = get_data()
+    #print(data)
+    display_subject_details()
 
 def get_data():
     """Read data from file formatted like: subject,lecturer,number of students."""
@@ -24,6 +24,14 @@ def get_data():
         print(parts)  # See if that worked
         print("----------")
     input_file.close()
+
+def display_subject_details():
+    input_file = open(FILENAME)
+    for sentence in input_file:
+        element = sentence.strip()  # Remove the \n
+        parts = element.split(',')
+        parts[2] = int(parts[2])
+        print(parts[0], "is taught by", parts[1], "and has", parts[2], "students" )
 
 
 main()
