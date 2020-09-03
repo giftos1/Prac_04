@@ -26,3 +26,5 @@ print(numbers + [6, 5, 3])
 """Get all the elements from numbers except the first two"""
 print(numbers[2:7])
 
+"""Check if 9 is an element of numbers"""
+#if 9 in numbers:
