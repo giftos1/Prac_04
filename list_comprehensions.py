@@ -40,3 +40,6 @@ print(numbers)
 
 # TODO: use a list comprehension to create a list of only the numbers that are
 # greater than 9 from the numbers (not strings) you just created
+numbers_greater_than_9 = [int(number) for number in numbers]
+numbers_greater_than_nine = [digit for digit in numbers_greater_than_9 if digit > 9]
+print(numbers_greater_than_nine)
